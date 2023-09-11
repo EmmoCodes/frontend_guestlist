@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import CommentForm from '../CommentForm/CommentForm.jsx'
 import GuestItem from '../GuestItem/GuestItem.jsx'
 import '../GuestItem/GuestItem.scss'
+import MessageForm from '../MessageForm/MessageForm.jsx'
 
 function GuestList() {
   const [refresh, setRefresh] = useState(false)
@@ -22,7 +22,7 @@ function GuestList() {
     <section>
       <h1>Guest List</h1>
       <h2>Add a comment</h2>
-      <CommentForm reload={setRefresh} />
+      <MessageForm reload={setRefresh} />
       <article className="item_wrapper">
         {messages.map((item, key) => (
           <GuestItem key={key} item={item} />
